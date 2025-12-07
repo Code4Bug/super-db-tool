@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "super-db-manager",
+  "version": "0.1.0",
+  "identifier": "com.edward.super-db-manager",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "超级数据库管理工具",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 768,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "identifier": "com.superdb.manager",
+    "publisher": "Super DB Team",
+    "copyright": "Copyright © 2025",
+    "category": "DeveloperTool",
+    "shortDescription": "跨平台数据库管理工具",
+    "longDescription": "一个基于 Tauri 的跨平台数据库管理工具，支持多种主流数据库和 ETL 数据同步功能",
+    "macOS": {
+      "minimumSystemVersion": "10.13",
+      "frameworks": [],
+      "exceptionDomain": ""
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    }
+  }
+}
