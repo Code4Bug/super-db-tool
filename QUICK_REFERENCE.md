@@ -128,12 +128,31 @@ rustc --version
 cargo --version
 ```
 
+## GitHub Actions 设置
+
+### 启用自动构建
+
+```bash
+# 运行设置向导（推荐）
+./scripts/setup-github-actions.sh
+
+# 或手动启用
+mkdir -p .github/workflows
+cp docs/github-actions-workflow.yml .github/workflows/build.yml
+git add .github/workflows/build.yml
+git commit -m "ci: add GitHub Actions workflow"
+git push origin develop
+```
+
+**注意**: 需要 GitHub Token 有 `workflow` 权限，详见 `docs/GITHUB_ACTIONS_SETUP.md`
+
 ## 有用的链接
 
 - [Tauri 文档](https://tauri.app/)
 - [React 文档](https://react.dev/)
 - [Material UI 文档](https://mui.com/)
 - [Rust 文档](https://doc.rust-lang.org/)
+- [GitHub Actions 设置指南](docs/GITHUB_ACTIONS_SETUP.md)
 
 ## Git 工作流
 
